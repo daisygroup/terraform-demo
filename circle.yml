@@ -1,0 +1,16 @@
+dependencies:
+  pre:
+    - wget https://dl.bintray.com/mitchellh/terraform/terraform_0.6.6_linux_amd64.zip
+    - unzip terraform_0.6.6_linux_amd64.zip
+
+test:
+  override:
+    - ./terraform remote config -backend=S3 -backend-config="bucket=$BUCKET" -backend-config="key=terraform.tfstate" -backend-config="region=eu-west-1"
+    - ./terraform plan -out=terraform.plan
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - ./terraform apply terraform.plan
+      - ./terraform remote push
