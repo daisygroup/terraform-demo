@@ -3,6 +3,10 @@ variable "aws_secret_access_key" {}
 variable "aws_region" {
     default = "eu-west-1"
 }
+variable "aws_vpc_cidr_block" {
+    default = "terraform-demo-vpc"
+}
+}
 variable "aws_image" {
     default = "ami-47a23a30"
 }
@@ -25,4 +29,3 @@ variable "azure_location" {
 }
 variable "azure_instance_username" {}
 variable "azure_instance_password" {}
-

@@ -8,7 +8,7 @@ provider "azure" {
     settings_file = "${var.azure_settings_file}"
 }
 
-resource "azure_hosted_service" "terraform-service" {
+resource "azure_hosted_service" "terraform-demo-service" {
     name = "${var.azure_hs_name}"
     location = "${var.azure_location}"
     ephemeral_contents = false
@@ -16,7 +16,7 @@ resource "azure_hosted_service" "terraform-service" {
     label = "${var.azure_hs_label}"
 }
 
-resource "azure_instance" "web" {
+resource "azure_instance" "terraform-demo-web" {
     name = "${var.azure_instance_name}"
     hosted_service_name = "${azure_hosted_service.terraform-service.name}"
     image = "${var.azure_linux_image}"
@@ -34,10 +34,16 @@ resource "azure_instance" "web" {
     }
 }
 
-resource "aws_instance" "web" {
+resource "aws_vpc" "terraform-demo-vpc" {
+  cidr_block = "${var.aws_vpc_cidr_block}"
+  tags {
+    Name = "daisy-terraform-demo"
+  }
+}
+resource "aws_instance" "terraform-demo-web" {
     ami = "${var.aws_image}"
     instance_type = "${var.aws_instance_type}"
     tags {
-        Name = "daisy-tf-demo"
+        Name = "daisy-terraform-demo"
     }
 }
