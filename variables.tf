@@ -22,7 +22,9 @@ variable "aws_instance_type" {
     default = "t2.micro"
 }
 
-variable "azure_hs_name" {}
+variable "azure_hs_name" {
+    default = "terraform-demo-service"
+}
 
 variable "azure_hs_label" {
     default = "tf-hs-01"
