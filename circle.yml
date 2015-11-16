@@ -8,7 +8,7 @@ dependencies:
 test:
   override:
     - ./terraform remote config -backend=S3 -backend-config="bucket=$TF_STATE_BUCKET" -backend-config="key=terraform.tfstate" -backend-config="region=eu-west-1"
-    - ./terraform plan -out=terraform.plan
+    - ./terraform plan -out=terraform.plan -input=false
 
 deployment:
   production:
