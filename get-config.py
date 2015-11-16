@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import os
 import boto3
 
 s3_client = boto3.client('s3')
