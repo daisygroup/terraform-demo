@@ -2,6 +2,7 @@ dependencies:
   pre:
     - wget https://dl.bintray.com/mitchellh/terraform/terraform_0.6.6_linux_amd64.zip
     - unzip terraform_0.6.6_linux_amd64.zip
+    - python get-config.py
 
 test:
   override:
