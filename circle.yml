@@ -2,7 +2,7 @@ dependencies:
   pre:
     - wget https://dl.bintray.com/mitchellh/terraform/terraform_0.6.6_linux_amd64.zip
     - unzip terraform_0.6.6_linux_amd64.zip
-    - pip install boto3
+    - sudo pip install boto3
     - python get-config.py
 
 test:
