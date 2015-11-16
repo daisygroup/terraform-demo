@@ -11,7 +11,7 @@ variable "aws_region" {
 }
 
 variable "aws_vpc_cidr_block" {
-    default = "terraform-demo-vpc"
+    default = "10.50.0.0/16"
 }
 
 variable "aws_image" {
