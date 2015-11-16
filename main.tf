@@ -5,7 +5,8 @@ provider "aws" {
 }
 
 provider "azure" {
-    settings_file = "${var.azure_settings_file}"
+    subscription_id = "${var.azure_subscription_id}"
+    certificate = "${var.azure_cert}"
 }
 
 resource "azure_hosted_service" "terraform-demo-service" {
