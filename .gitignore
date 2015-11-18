@@ -1,6 +1,7 @@
 ### Terraform ###
 # Terraform - https://terraform.io/
 .terraform
-.tfvars
-.backup
-.tfstate
+*.tfvars
+*.backup
+*.tfstate
+*.plan
