@@ -1,11 +1,8 @@
-# AWS Credentials
 variable "aws_access_key_id" {}
 variable "aws_secret_access_key" {}
-
-#Azure Credentials
-variable "azure_subscription_id" {}
-variable "azure_cert" {}
-
+variable "azure_credentials" {
+    default = "azure_settings_file"
+}
 variable "aws_region" {
     default = "eu-west-1"
 }
