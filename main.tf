@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 provider "azure" {
-    settings_file = "${file("azure-credentials.publishsettings")}"
+      settings_file = "${file("azure-credentials.publishsettings")}"
 }
 
 resource "azure_hosted_service" "terraform-demo-service" {
@@ -19,6 +19,7 @@ resource "azure_hosted_service" "terraform-demo-service" {
 resource "azure_instance" "terraform-demo-web" {
     name = "${var.azure_instance_name}"
     hosted_service_name = "${azure_hosted_service.terraform-demo-service.name}"
+    depends_on = ["azure_hosted_service.terraform-demo-service"]
     image = "${var.azure_linux_image}"
     size = "${var.azure_instance_size}"
     storage_service_name = "${var.azure_storage_service_name}"

@@ -5,3 +5,4 @@
 *.backup
 *.tfstate
 *.plan
+*.publishsettings
