@@ -1,8 +1,6 @@
 variable "aws_access_key_id" {}
 variable "aws_secret_access_key" {}
-variable "azure_credentials" {
-    default = "azure_settings_file"
-}
+variable "azure_settings_file" {}
 variable "aws_region" {
     default = "eu-west-1"
 }
