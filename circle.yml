@@ -4,6 +4,7 @@ dependencies:
     - unzip terraform_0.6.6_linux_amd64.zip
     - sudo pip install boto3
     - python get-config.py
+    - sudo apt-get install graphviz
 
 test:
   override:
@@ -16,3 +17,5 @@ deployment:
     commands:
       - ./terraform apply terraform.plan
       - ./terraform remote push
+      - ./terraform graph | dot -Tpng > dependency-graph.png
+      - ./push_to_github.sh
