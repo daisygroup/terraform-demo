@@ -25,7 +25,7 @@ resource "azure_instance" "terraform-demo-web" {
     storage_service_name = "${var.azure_storage_service_name}"
     location = "${var.azure_location}"
     username = "${var.demo_username}"
-    password = "${var.demo_username}"
+    password = "${var.demo_password}"
 
     endpoint {
         name = "SSH"
@@ -38,6 +38,6 @@ resource "azure_instance" "terraform-demo-web" {
 resource "azure_sql_database_server" "sql-serv" {
     location = "${var.azure_location}"
     username = "${var.demo_username}"
-    password = "${var.demo_username}"
+    password = "${var.demo_password}"
     version = "2.0"
 }
