@@ -3,8 +3,7 @@ dependencies:
     - wget https://dl.bintray.com/mitchellh/terraform/terraform_0.6.6_linux_amd64.zip
     - unzip terraform_0.6.6_linux_amd64.zip
     - sudo pip install boto3
-    - python get-config.py
-    - sudo apt-get update; sudo apt-get install graphviz
+    - python tools/get-config.py
 
 test:
   override:

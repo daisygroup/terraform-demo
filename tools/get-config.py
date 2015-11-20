@@ -1,6 +1,6 @@
 #!/usr/bin/python
 #
-# Get the config values from S3
+# Get Terraform config values from S3
 # Requires $TF_CONFIG_BUCKET env variable to be set
 #
 # dan.young@daisygroup.com
