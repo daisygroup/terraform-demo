@@ -4,7 +4,7 @@ dependencies:
     - unzip terraform_0.6.6_linux_amd64.zip
     - sudo pip install boto3
     - python get-config.py
-    - sudo apt-get install graphviz
+    - sudo apt-get update; sudo apt-get install graphviz
 
 test:
   override:

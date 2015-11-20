@@ -32,5 +32,5 @@ variable "azure_storage_service_name" {}
 variable "azure_location" {
     default = "North Europe"
 }
-variable "azure_instance_username" {}
-variable "azure_instance_password" {}
+variable "demo_username" {}
+variable "demo_password" {}
