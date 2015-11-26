@@ -14,7 +14,7 @@ deployment:
   production:
     branch: master
     commands:
-      - ./terraform apply terraform.plan
+      - ./terraform-apply.sh
       - ./terraform remote push
       - ./terraform graph | dot -Tpng > dependency-graph.png
       - ./push_to_github.sh
