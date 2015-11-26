@@ -34,10 +34,3 @@ resource "azure_instance" "terraform-demo-web" {
         private_port = 22
     }
 }
-
-resource "azure_sql_database_server" "sql-serv" {
-    location = "${var.azure_location}"
-    username = "${var.demo_username}"
-    password = "${var.demo_password}"
-    version = "2.0"
-}
