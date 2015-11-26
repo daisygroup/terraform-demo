@@ -2,8 +2,7 @@
 #
 # Upload Terraform config values to S3
 # Requires $TF_CONFIG_BUCKET and $TF_VALUES_FILE env variables to be set
-#
-# dan.young@daisygroup.com
+
 
 import os
 import boto3
