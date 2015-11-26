@@ -18,4 +18,6 @@ list = s3_client.list_objects(Bucket=bucket)['Contents']
 
 # Download the objects from S3
 for key in list:
-    s3_client.download_file(bucket, key['Key'], key['Key'])
+    #s3_client.download_file(bucket, key['Key'], key['Key'])
+    s3_client.download_file(bucket, 'terraform.tfvars', 'terraform.tfvars')
+    s3_client.download_file(bucket, 'azure-credentials.publishsettings', 'azure-credentials.publishsettings')
