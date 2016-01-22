@@ -1,6 +1,6 @@
 machine:
   environment:
-    GIT_USER_EMAIL: dan.young@daisygroup.com
+    GIT_USER_EMAIL: dan@ejecteject.co.uk
     GIT_USER_NAME: danyoung
 
 dependencies:

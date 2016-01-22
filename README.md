@@ -1,3 +1,3 @@
-Daisy Terraform Demo
+Terraform Example on AWS
 
-Automated deployment of infrastructure to AWS and Azure
+An example of AWS deployment using Terraform

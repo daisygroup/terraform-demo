@@ -13,4 +13,3 @@ s3_client = boto3.client('s3')
 bucket = os.environ['TF_CONFIG_BUCKET'];
 
 s3_client.download_file(bucket, 'terraform.tfvars', 'terraform.tfvars')
-s3_client.download_file(bucket, 'azure-credentials.publishsettings', 'azure-credentials.publishsettings')
