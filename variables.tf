@@ -30,27 +30,27 @@ variable "aws_instance_type" {
 }
 
 variable "aws_default_tag" {
-    default = "terraform-example"
+    default = "daisy-terraform-demo"
 }
 
 variable "solution_name" {
-    default = "terraform-example"
+    default = "daisy-terraform-demo"
 }
 
 variable "solution_description" {
-    default = "Terraform Example"
+    default = "Daisy Terraform Demo"
 }
 
 variable "azure_hs_name" {
-    default = "terraform-example"
+    default = "daisy-terraform-demo"
 }
 
 variable "azure_hs_label" {
-    default = "terraform-example"
+    default = "daisy-terraform-demo"
 }
 
 variable "azure_instance_name" {
-    default = "terraform-example"
+    default = "daisy-terraform-demo"
 }
 
 variable "azure_linux_image" {
